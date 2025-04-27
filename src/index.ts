@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import morgan from 'morgan';
 import { config } from './config';
 import extractRoutes from './routes/extractRoutes';
 import inspirationRoutes from './routes/inspirationRoutes';
@@ -12,7 +11,6 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(morgan('dev'));
 
 // Serve static files
 app.use('/screenshots', express.static('src/public/screenshots'));

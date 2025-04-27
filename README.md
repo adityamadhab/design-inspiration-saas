@@ -34,7 +34,7 @@ A robust backend system for a SaaS design inspiration platform that allows admin
 - **Object Storage**: Cloudflare R2
 - **Authentication**: JWT
 - **Validation**: Zod
-- **Logging**: Morgan, Simple-Logmate
+- **Logging**: Simple-Logmate (My Own Package)
 
 ## 📋 Prerequisites
 
