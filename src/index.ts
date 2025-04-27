@@ -12,9 +12,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Serve static files
-app.use('/screenshots', express.static('src/public/screenshots'));
-
 // Routes
 app.use('/api', extractRoutes);
 app.use('/api/inspirations', inspirationRoutes);
