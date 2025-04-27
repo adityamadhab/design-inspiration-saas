@@ -31,7 +31,7 @@ A robust backend system for a SaaS design inspiration platform that allows admin
 - **Framework**: Express.js with TypeScript
 - **Database**: MongoDB with Prisma ORM
 - **Web Scraping**: Puppeteer
-- **Storage**: AWS S3
+- **Object Storage**: Cloudflare R2
 - **Authentication**: JWT
 - **Validation**: Zod
 - **Logging**: Morgan, Simple-Logmate
@@ -40,8 +40,6 @@ A robust backend system for a SaaS design inspiration platform that allows admin
 
 - Node.js (v14 or higher)
 - MongoDB
-- AWS Account (for S3)
-- Postman (for API testing)
 
 ## 🔧 Installation
 
@@ -62,14 +60,16 @@ A robust backend system for a SaaS design inspiration platform that allows admin
    Create a `.env` file in the root directory with the following variables:
 
    ```env
-   DATABASE_URL=your_mongodb_url
-   JWT_SECRET=your_jwt_secret
-   AWS_ACCESS_KEY_ID=your_aws_access_key
-   AWS_SECRET_ACCESS_KEY=your_aws_secret_key
-   AWS_REGION=your_aws_region
-   AWS_BUCKET_NAME=your_bucket_name
    PORT=3000
-   NODE_ENV=development
+   DATABASE_URL="your_mongodb_connection_string"
+   NODE_ENV="development"
+   JWT_SECRET="your_jwt_secret"
+   CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id
+   CLOUDFLARE_ACCESS_KEY_ID=your_cloudflare_access_key_id
+   CLOUDFLARE_SECRET_ACCESS_KEY=your_cloudflare_secret_access_key
+   CLOUDFLARE_BUCKET_NAME=your_bucket_name
+   CLOUDFLARE_ENDPOINT=your_cloudflare_endpoint
+   CLOUDFLARE_PUBLIC_URL=your_cloudflare_public_url
    ```
 
 4. Generate Prisma client:
@@ -171,19 +171,3 @@ For complete API documentation, visit:
 - Environment variables for sensitive data
 - CORS enabled
 - Request logging and monitoring
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the ISC License.
-
-## 👥 Author
-
-Created as part of the AtoZDebug Assignment.
