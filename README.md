@@ -20,7 +20,7 @@ A robust backend system for a SaaS design inspiration platform that allows admin
 
 - **Advanced Features**
   - JWT-based authentication for admin routes
-  - Cloud storage for screenshots (AWS S3)
+  - Cloud storage for screenshots (Cloudflare R2)
   - Request logging and monitoring
   - Input validation and error handling
   - Pagination support
